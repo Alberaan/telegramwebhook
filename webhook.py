@@ -34,9 +34,9 @@ def on_chosen_inline_result(msg):
     print('Chosen Inline Result:', result_id, from_id, query_string)
 
 
-TOKEN = sys.argv[1]
-PORT = int(sys.argv[2])
-URL = sys.argv[3]
+TOKEN = str(os.environ["telegram_token"])
+PORT = str(os.environ["telegram_port"])
+URL = str(os.environ["telegram_url"])
 
 app = Flask(__name__)
 bot = telepot.Bot(TOKEN)
