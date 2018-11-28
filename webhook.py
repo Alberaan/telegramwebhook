@@ -41,7 +41,7 @@ def on_chosen_inline_result(msg):
 
 
 TOKEN = str(os.environ["telegram_token"])
-TELEGRAM_PORT = str(os.environ["telegram_port"])
+TELEGRAM_PORT = str(os.environ["PORT"])
 URL = str(os.environ["telegram_url"])
 
 app = Flask(__name__)
