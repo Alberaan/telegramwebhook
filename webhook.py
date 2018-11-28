@@ -57,6 +57,7 @@ def pass_update():
     return 'OK'
 
 if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
     try:
         bot.setWebhook(URL)
     # Sometimes it would raise this error, but webhook still set successfully.
@@ -64,6 +65,3 @@ if __name__ == '__main__':
         pass
 
     webhook.run_as_thread()
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
