@@ -1,1 +1,1 @@
-web: gunicorn webhook.py --log-file -
+web: gunicorn webhook
