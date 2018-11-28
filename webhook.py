@@ -41,7 +41,7 @@ def on_chosen_inline_result(msg):
 
 
 TOKEN = str(os.environ["telegram_token"])
-PORT = str(os.environ["telegram_port"])
+TELEGRAM_PORT = str(os.environ["telegram_port"])
 URL = str(os.environ["telegram_url"])
 
 app = Flask(__name__)
@@ -64,4 +64,4 @@ if __name__ == '__main__':
         pass
 
     webhook.run_as_thread()
-app.run(host="0.0.0.0", port=PORT, debug=True)
+app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
