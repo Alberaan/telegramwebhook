@@ -58,8 +58,11 @@ def pass_update():
     return 'OK'
 
 if __name__ == '__main__':
-    print("Executing the stuff")
     app.run()
+    printf("Executed the run")
+    
+if __name__ != '__main__':
+    print("Executing the stuff")
     print("After running app")
     try:
         print("Inside try")
