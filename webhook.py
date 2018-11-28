@@ -56,7 +56,7 @@ def pass_update():
     webhook.feed(request.data)
     return 'OK'
 
-if __name__ == '__main__':
+if __name__ != '__main__':
     print("Executing the stuff")
     app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
     try:
