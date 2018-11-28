@@ -12,7 +12,7 @@ Webhook path is '/webhook', therefore:
 def sendData(msg, bot, data):
     if bot != None:
         content_type, chat_type, chat_id = telepot.glance(msg)
-bot.sendMessage(chat_id, data)
+        bot.sendMessage(chat_id, data)
 
 def on_chat_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
