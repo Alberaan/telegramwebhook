@@ -59,7 +59,7 @@ def pass_update():
 
 if __name__ != '__main__':
     print("Executing the stuff")
-    app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
+    app.run()
     print("After running app")
     try:
         print("Inside try")
