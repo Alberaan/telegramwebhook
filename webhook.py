@@ -9,9 +9,14 @@ $ python2.7 webhook.py
 Webhook path is '/webhook', therefore:
 <webhook_url>: https://<base>/webhook
 """
+def sendData(msg, bot, data):
+    if bot != None:
+        content_type, chat_type, chat_id = telepot.glance(msg)
+bot.sendMessage(chat_id, data)
 
 def on_chat_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
+    sendData(msg, bot, "This is the bot answering")
     print('Chat Message:', content_type, chat_type, chat_id)
 
 def on_callback_query(msg):
