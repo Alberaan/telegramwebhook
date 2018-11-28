@@ -57,6 +57,7 @@ def pass_update():
     return 'OK'
 
 if __name__ == '__main__':
+    print("Executing the stuff")
     app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
     try:
         bot.setWebhook(URL)
