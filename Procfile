@@ -1,1 +1,1 @@
-web: gunicorn webhook:app
+worker: gunicorn webhook:app
