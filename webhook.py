@@ -4,7 +4,7 @@ import telepot
 from telepot.loop import OrderedWebhook
 
 """
-$ python2.7 flask_skeleton.py <token> <listening_port> <webhook_url>
+$ python2.7 webhook.py
 Webhook path is '/webhook', therefore:
 <webhook_url>: https://<base>/webhook
 """
