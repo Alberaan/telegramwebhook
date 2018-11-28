@@ -64,4 +64,6 @@ if __name__ == '__main__':
         pass
 
     webhook.run_as_thread()
-app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
