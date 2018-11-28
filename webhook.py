@@ -43,7 +43,7 @@ def on_chosen_inline_result(msg):
 TOKEN = str(os.environ["telegram_token"])
 TELEGRAM_PORT = str(os.environ["PORT"])
 URL = str(os.environ["telegram_url"])
-
+print(TELEGRAM_PORT)
 app = Flask(__name__)
 bot = telepot.Bot(TOKEN)
 webhook = OrderedWebhook(bot, {'chat': on_chat_message,
