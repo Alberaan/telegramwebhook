@@ -15,6 +15,7 @@ def sendData(msg, bot, data):
         bot.sendMessage(chat_id, data)
 
 def on_chat_message(msg):
+    print("Inside on_chat_message")
     content_type, chat_type, chat_id = telepot.glance(msg)
     sendData(msg, bot, "This is the bot answering")
     print('Chat Message:', content_type, chat_type, chat_id)
@@ -59,8 +60,11 @@ def pass_update():
 if __name__ != '__main__':
     print("Executing the stuff")
     app.run(host="0.0.0.0", port=TELEGRAM_PORT, debug=True)
+    print("After running app")
     try:
+        print("Inside try")
         bot.setWebhook(URL)
+        print("After setting webhook")
     # Sometimes it would raise this error, but webhook still set successfully.
     except telepot.exception.TooManyRequestsError:
         pass
